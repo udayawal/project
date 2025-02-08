@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Shield, Terminal, Briefcase, GraduationCap, Mail, Github, Linkedin } from 'lucide-react';
+import { Shield, Terminal, Briefcase, GraduationCap, Mail, Github, Linkedin, Instagram } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
 import Home from './pages/Home';
 import About from './pages/About';
