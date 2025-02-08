@@ -1,61 +1,71 @@
 import React from 'react';
-import { Briefcase, Server, Code, Cpu } from 'lucide-react';
+import { GraduationCap, Award, Shield, FileText } from 'lucide-react';
 
-export default function Experience() {
+export default function About() {
+  const certifications = [
+    { title: 'CompTIA Security+ (SY0-601)', icon: Shield },
+    { title: 'Microsoft: Security, Compliance, and Identity Fundamentals (SC-900)', icon: Shield },
+    { title: 'Microsoft: Azure Fundamentals (AZ-900)', icon: Shield },
+    { title: 'Microsoft: Azure AI Fundamentals (AI-900)', icon: Shield },
+    { title: 'KPMG: Lean Six Sigma Green Belt', icon: Award },
+    { title: 'Scrum Foundation Professional Certification', icon: Award }
+  ];
+
   return (
     <div className="space-y-12">
-      <h2 className="text-3xl font-bold flex items-center space-x-2">
-        <Briefcase className="w-8 h-8" />
-        <span>Professional Experience</span>
-      </h2>
-
-      <div className="space-y-8">
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
-          <div className="flex items-start justify-between">
-            <div>
-              <h3 className="text-xl font-semibold">Technical Support Specialist</h3>
-              <p className="text-gray-600 dark:text-gray-400">PrismCode Info Solutions Pvt. Ltd</p>
-            </div>
-            <span className="text-sm text-gray-500 dark:text-gray-500">Jan 2024 - Aug 2024</span>
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold flex items-center space-x-2">
+          <GraduationCap className="w-8 h-8" />
+          <span>Education</span>
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-xl">Master of Information Systems Security</h3>
+            <p className="text-gray-600 dark:text-gray-400">Concordia University, Montreal</p>
+            <p className="text-sm text-gray-500 dark:text-gray-500">Sep 2024 - May 2026</p>
           </div>
-          <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600 dark:text-gray-400">
-            <li>Provided technical assistance for hardware, software, and network-related issues</li>
-            <li>Resolved OS errors, connectivity problems, and application bugs using remote desktop tools</li>
-            <li>Handled complex L2 support issues including database connectivity and server configurations</li>
-            <li>Performed root cause analysis, patch management, and network security configurations</li>
-          </ul>
-        </div>
 
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
-          <div className="flex items-start justify-between">
-            <div>
-              <h3 className="text-xl font-semibold">Cloud Infrastructure and Security Intern</h3>
-              <p className="text-gray-600 dark:text-gray-400">Celebal Technologies</p>
-            </div>
-            <span className="text-sm text-gray-500 dark:text-gray-500">June 2023 - Aug 2023</span>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-xl">B.Tech in Computer Science</h3>
+            <p className="text-gray-600 dark:text-gray-400">Amity University Haryana</p>
+            <p className="text-sm text-gray-500 dark:text-gray-500">Aug 2020 - May 2024</p>
           </div>
-          <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600 dark:text-gray-400">
-            <li>Facilitated VNet pairing and Hub-and-Spoke architecture setup in Azure</li>
-            <li>Implemented secure cross-premises connections through Azure ExpressRoute</li>
-            <li>Configured route propagation and traffic filtering for network segmentation</li>
-          </ul>
         </div>
+      </section>
 
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
-          <div className="flex items-start justify-between">
-            <div>
-              <h3 className="text-xl font-semibold">Embedded System Developer</h3>
-              <p className="text-gray-600 dark:text-gray-400">Birdhouse Shelter Pvt. Ltd</p>
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold flex items-center space-x-2">
+          <Award className="w-8 h-8" />
+          <span>Certifications</span>
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certifications.map((cert, index) => (
+            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
+              <cert.icon className="w-6 h-6 text-blue-600 dark:text-blue-400 mb-2" />
+              <p className="font-medium">{cert.title}</p>
             </div>
-            <span className="text-sm text-gray-500 dark:text-gray-500">July 2020 - Jan 2022</span>
-          </div>
-          <ul className="mt-4 space-y-2 list-disc list-inside text-gray-600 dark:text-gray-400">
-            <li>Developed smart cart project for automated food delivery to customer rooms</li>
-            <li>Implemented advanced biometric authentication for smart lock systems</li>
-            <li>Integrated facial recognition and fingerprint technology for enhanced security</li>
-          </ul>
+          ))}
         </div>
-      </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold flex items-center space-x-2">
+          <FileText className="w-8 h-8" />
+          <span>Patent</span>
+        </h2>
+        
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+          <h3 className="font-semibold text-xl mb-2">Multipurpose Network Security Device</h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-2">Patent No: 202441031471 · Filed Apr 19, 2024</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            The innovation introduces a cutting-edge network security device powered by Raspberry Pi, revolutionizing cybersecurity with its all-in-one functionality. 
+            Conduct network penetration tests, prevent intrusions, and verify USB device integrity seamlessly. With its user-friendly touch screen interface, 
+            it's perfect for both professionals and enthusiasts. Stay ahead of evolving threats with our compact and versatile solution.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
