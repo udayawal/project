@@ -22,6 +22,18 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full px-4">
+       <Link to="/experience" 
+          className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 
+                   transition-all duration-300 hover:scale-105 hover:border-blue-500 dark:hover:border-blue-400 group">
+          <div className="flex items-center space-x-4">
+            <Lock className="w-8 h-8 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform" />
+            <div className="text-left">
+              <h3 className="font-semibold text-xl group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Professional Journey</h3>
+              <p className="text-gray-600 dark:text-gray-400">View my work experience and achievements</p>
+            </div>
+            <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
+          </div>
+        </Link>
         <Link to="/about" 
           className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 
                    transition-all duration-300 hover:scale-105 hover:border-blue-500 dark:hover:border-blue-400 group">
@@ -35,18 +47,6 @@ export default function Home() {
           </div>
         </Link>
         
-        <Link to="/experience" 
-          className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 
-                   transition-all duration-300 hover:scale-105 hover:border-blue-500 dark:hover:border-blue-400 group">
-          <div className="flex items-center space-x-4">
-            <Lock className="w-8 h-8 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform" />
-            <div className="text-left">
-              <h3 className="font-semibold text-xl group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Professional Journey</h3>
-              <p className="text-gray-600 dark:text-gray-400">View my work experience and achievements</p>
-            </div>
-            <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
-          </div>
-        </Link>
       </div>
 
       <div className="max-w-4xl w-full px-4">
